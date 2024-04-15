@@ -1,29 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    var time = 0
-    class timerClass {
-        constructor() {
-            this.elem = document.querySelector('#time')
-        }
-        intervalFunction() {
-            time++
-            // console.log(this.elem)
-            document.getElementById('time').innerHTML = time + 'ms'
-        }
-        start() {
-            this.interval = setInterval(this.intervalFunction, 1)
-        }
-        stop() {
-            clearInterval(this.interval)
-        }
-        reset() {
-            time = 0
-        }
-    }
-    var timer = new timerClass()
-    console.log(timer)
-
-
 
     var button = {
         dom: document.querySelector('#button'),
@@ -36,14 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(this.reflexin){
                     this.dom.innerHTML = 'Restart'
                     document.body.style.backgroundColor = 'purple'
-                    timer.stop()
                     this.playin = false
                     this.reflexin = false
                 }else if (this.playin) {
                     this.dom.innerHTML = 'Restart'
                     document.body.style.backgroundColor = 'green'
-                    document.getElementById('times').innerHTML += "<p>" + time + "ms" + "</p>"
-                    timer.stop()
+                    document.getElementById('times').innerHTML += "<p>" + (Date.now() - this.start) + 'ms' + "</p>"
+                    document.getElementById('time').innerHTML = (Date.now() - this.start) + 'ms'
                     this.playin = false
                 } else {
                     this.iter++
@@ -51,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.playin = true
                     this.reflexin = true
                     this.dom.innerHTML = 'Ready ?'
-                    timer.reset()
                     document.body.style.backgroundColor = 'lightgray'
                     setTimeout(() => {
                         if(it != this.iter) return
                         if(this.playin == false)return
+                        this.start = Date.now()
                         this.dom.innerHTML = 'Click !'
                         this.reflexin = false
                         document.body.style.backgroundColor = 'red'
