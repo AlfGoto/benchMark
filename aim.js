@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
             this.score++
             this.msg = this.time + 's   ' + this.score
             this.info.innerHTML = this.msg
-            this.target.style.top = Math.floor(Math.random() * (92 - 1 + 1) + 1) + 'svh'
-            this.target.style.left = Math.floor(Math.random() * (92 - 1 + 1) + 1) + 'svw'
+            this.target.style.top = Math.floor(Math.random() * (window.innerHeight-80 - 1 + 1) + 1) + 'px'
+            this.target.style.left = Math.floor(Math.random() * (window.innerWidth-80 - 1 + 1) + 1) + 'px'
         }
     }
     game.init()

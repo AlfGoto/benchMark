@@ -40,6 +40,8 @@ body {
     }
     #times {
         position: absolute;
+        display: flex;
+        flex-direction: column;
         top: 0px;
         right: 0px;
     }
@@ -66,8 +68,8 @@ nav {
 #target {
     position: absolute;
     z-index: 10;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     background-color: orange;
 }
@@ -83,8 +85,8 @@ nav {
         justify-content: space-evenly;
         top: 90svh;
     }
-    #target {
+    /* #target {
         height: 80px;
         width: 80px;
-    }
+    } */
 }
