@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         result: false,
         init() {
             // target.addEventListener('click', this.click)
-            document.addEventListener('click', e => {
+            document.addEventListener('pointerdown', e => {
                 if (e.target == this.target) {
                     this.click()
                 } else if (this.playin) {
