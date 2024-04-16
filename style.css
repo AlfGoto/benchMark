@@ -83,4 +83,8 @@ nav {
         justify-content: space-evenly;
         top: 90svh;
     }
+    #target {
+        height: 80px;
+        width: 80px;
+    }
 }
