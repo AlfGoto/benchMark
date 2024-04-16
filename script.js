@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         iter: 0,
         init: function () {
             console.log(this.dom)
-            document.addEventListener('click', () => {
+            document.addEventListener('pointerdown', () => {
                 if(this.reflexin){
                     this.dom.innerHTML = 'Restart'
                     document.body.style.backgroundColor = 'purple'
