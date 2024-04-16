@@ -9,6 +9,7 @@
 body{
     width: 100svw;
     height: 100svh;
+    overflow: hidden;
 
     background-color: lightgray;
     display: flex;
@@ -28,7 +29,7 @@ body{
         text-align: center;
     }
     #time{
-        width: 10svw;
+        width: fit-content;
         height: 5svw;
         padding: 1svw;
         font-size: 3svw;
@@ -41,4 +42,32 @@ body{
         top: 0px;
         right: 0px;
     }
+}
+
+
+nav{
+    padding: 1svw;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 1svw;
+}
+#info{
+    position: absolute;
+    left: 50svw;
+    z-index: 5;
+    transform: translateX(-50%);
+    top: 10svh;
+    font-size: 3svw;
+    user-select: none;
+}
+#target{
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: orange;
 }
