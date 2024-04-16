@@ -15,7 +15,6 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     justify-content: space-around;
 
@@ -84,9 +83,6 @@ nav {
         width: 100svw;
         justify-content: space-evenly;
         top: 90svh;
+        gap: 3svw;
     }
-    /* #target {
-        height: 80px;
-        width: 80px;
-    } */
 }
